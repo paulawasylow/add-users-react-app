@@ -1,6 +1,6 @@
 ## ADD USERS APP in React
 
-List of users (first name, last name, e-mail) table.
+List of users (first name, last name, e-mail) table. [DEMO](https://paulawasylow.github.io/add-users-react-app/)
 
 ## ADDED FEATURES:
 
