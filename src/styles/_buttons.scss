@@ -1,0 +1,66 @@
+.btn {
+  width: 12em;
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: convertSize(16, pt, em);
+
+  &.btn__add {
+  background-color: $white;
+  border: 0.1em $green solid;
+  border-radius: 0.2em;
+  color: $green;
+
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+  &.btn__submit {
+  background-color: $green;
+  color: $white;
+  border-radius: 0.2em;
+  @include media-query-max(725px) {
+    width: 100%;
+   }
+  }
+}
+
+.btn__clear--danger {
+padding: 1em;
+text-align: center;
+font-weight: bold;
+cursor: pointer;
+font-size: convertSize(16, pt, em);
+color: $red;
+text-decoration: underline;
+@include media-query-max(850px) {
+  padding: 1em 0;
+  display: block;
+  }
+}
+
+.btn__remove {
+  width: 1em;
+  float: right;
+  transform: rotate(45deg) scale(2);
+  color: $dark-gray;
+  outline: 0;
+  @include media-query-max(440px) {
+    transform: translateY(45%) translateX(0%) rotate(45deg) scale(2.5);
+    padding: 0.5em 1em;
+   }
+
+   &::after {
+     top: 0;
+     left: 0;
+     @include media-query-max(440px) {
+     content: attr(data-content);
+     position: absolute;
+     transform: rotate(-45deg) translateX(-100%) translateY(250%);
+     font-size: 4.6px;
+     }
+   }
+}

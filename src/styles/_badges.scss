@@ -1,0 +1,37 @@
+.badge-lp {
+   position: absolute;
+}
+
+.badge-lp[data-count]:after {
+   content: attr(data-count);
+   position: absolute;
+   transform: translateY(-50%) translateX(0%);
+   font-size: convertSize(13, pt, em);
+   font-weight: bold;
+   background: $grey;
+   color: $dark-gray;
+   width: 1.65em;
+   height: 1.65em;
+   text-align: center;
+   line-height: 1.65em;
+   border-radius: 50%;
+}
+
+.badge-icon {
+  position: relative;
+
+  &.badge-icon::after {
+   content: attr(data-count);
+   position: absolute;
+   font-size: convertSize(13, pt, em);
+   font-weight: bold;
+   background: $green;
+   color: $white;
+   width: 1.4em;
+   height: 1.4em;
+   text-align: center;
+   line-height: 1.4em;
+   border-radius: 50%;
+   transform: translateY(-10%) translateX(-125%);
+ }
+}

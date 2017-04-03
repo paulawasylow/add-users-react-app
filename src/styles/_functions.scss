@@ -1,0 +1,16 @@
+@function convertSize($size, $currentUnit, $convertUnit) {
+  @if $currentUnit == pt {
+
+    @if $convertUnit == px{
+      @return $size * 1.3333 + 0px;
+    }
+
+    @else if $convertUnit == em {
+      @return $size / 12 + 0em;
+    }
+
+    @else if $convertUnit == percent {
+      @return percentage($size / 12);
+    }
+  }
+}

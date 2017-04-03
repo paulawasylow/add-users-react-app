@@ -1,0 +1,40 @@
+.message__action {
+  font-size: convertSize(13, pt, em);
+
+  &--success {
+    color: $dark-brown;
+    padding: 0 2em;
+    @include media-query-max(465px) {
+    display: block;
+    padding: 1.6em 0 0 0;
+    }
+  }
+
+  &--warning {
+    color: $dark-brown;
+    padding: 0 2em;
+    @include media-query-max(465px) {
+    display: block;
+    padding: 1.6em 0 0 0;
+    }
+  }
+
+  &--no-users {
+    color: $dark-brown;
+    padding: 1.6em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--invalid {
+    padding: 0.5em 0;
+    color: $red;
+    position: absolute;
+    transform: translateY(200%) translateX(-110%);
+    @include media-query-max(725px) {
+    transform: translateY(0%) translateX(0%);
+    position: relative;
+    }
+  }
+}
